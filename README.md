@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gridhouse
 
-## Getting Started
+A minimalist, interactive 3x3 grid game built with Next.js and Tailwind CSS. The grid features "Brutalist" aesthetics and complex ripple-effect logic.
 
-First, run the development server:
+## 🎮 Game Rules
+
+Click on any box to increment its value. However, watch out for the ripple effects!
+
+1.  **Direct Interaction**: Clicking a box increases its value by **1**.
+2.  **Ripple (Right)**: If a box's value becomes divisible by **3**, the box to its **right** decreases in value by **1**.
+3.  **Ripple (Down)**: If a box's value becomes divisible by **5**, the box **below** it increases in value by **2**.
+4.  **Locking System**: Once a box reaches a value of **15 or higher**, it becomes **Locked**.
+    *   Locked boxes turn **Red**.
+    *   They cannot be clicked.
+    *   They are immune to ripple effects from neighbors.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: React `useState` with immutable updates
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+## 🚀 Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to play.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/page.tsx`: Contains the core logic, state management, and the main grid component.
+- `app/globals.css`: Minimalist CSS setup with Tailwind imports and light/dark mode support.
+- `app/layout.tsx`: Root layout configured with the Inter font.

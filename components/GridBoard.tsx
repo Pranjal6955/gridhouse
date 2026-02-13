@@ -36,7 +36,7 @@ function Cell({ cell, onClick }: { cell: CellType; onClick: () => void }) {
     return (
         <div
             onClick={onClick}
-            className={`flex aspect-square w-24 sm:w-32 items-center justify-center rounded-[4px] border-2 border-black text-2xl sm:text-3xl font-bold transition-all shadow-[4px_4px_0px_black] ${cell.locked
+            className={`flex aspect-square w-24 sm:w-32 items-center justify-center rounded-[4px] border-2 border-black text-2xl sm:text-3xl font-bold transition-all shadow-[4px_4px_0px_black] ${cell.locked || cell.value >= 15
                     ? "cursor-not-allowed bg-red-600 text-white"
                     : `cursor-pointer active:translate-x-[1px] active:translate-y-[1px] active:shadow-none ${cell.value % 2 === 0
                         ? "bg-[#e0e0e0] text-black"

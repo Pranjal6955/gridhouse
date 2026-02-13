@@ -6,7 +6,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gridhouse",
-  description: "A clean starter template",
+  description: "A minimalist, interactive 3x3 grid game,",
+  icons: {
+    icon: "/gridhouse.png",
+    shortcut: "/gridhouse.png",
+    apple: "/gridhouse.png",
+  },
+  openGraph: {
+    images: ["/gridhouse.png"],
+  },
 };
 
 export default function RootLayout({

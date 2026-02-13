@@ -1,4 +1,7 @@
-# Gridhouse
+<div align="center">
+  <img src="public/gridhouse.png" width="128" height="128" alt="Gridhouse Logo" />
+  <h1>Gridhouse</h1>
+</div>
 
 A minimalist, interactive 3x3 grid game built with Next.js and Tailwind CSS. The grid features "Brutalist" aesthetics, a dot-matrix background, and complex ripple-effect logic.
 
